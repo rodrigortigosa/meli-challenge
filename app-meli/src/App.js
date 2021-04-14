@@ -1,25 +1,28 @@
 import { Navbar } from './components/common/Navbar';
 import { Home } from './components/views/Home';
+import { Resultados } from './components/views/Resultados';
+import { NoMatch } from './components/views/NoMatch';
+import { HOME, RESULTADOS } from './config/router/paths';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { HOME, RESULTADOS, DETALLE } from './config/router/paths';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar></Navbar>
-       <Switch>
-         <Route path={HOME} exact>
-           <Home></Home>
-         </Route>
-         <Route path={RESULTADOS}>
-         </Route>
-         <Route path={DETALLE}></Route>
-       </Switch>
+        <Navbar />
+        <Switch>
+          <Route path={RESULTADOS} component={Resultados}>
+            <Resultados />
+          </Route>
+          <Route path={HOME} exact>
+            <Home />
+          </Route>
+          <Route>
+            <NoMatch />
+          </Route>
+        </Switch>
       </Router>
-          
-          
-    </div>
+  </div>
   );
 }
 

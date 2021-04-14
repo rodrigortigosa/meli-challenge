@@ -7,7 +7,7 @@ export const Navbar = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    history.push(`${RESULTADOS}${event.target["query"].value}`);
+    history.push(`${RESULTADOS}/items?search=${event.target["query"].value}`);
     event.target["query"].value = "";
   }
 
