@@ -1,4 +1,4 @@
-import '../../Navbar.css';
+import '../../styles/Navbar.css';
 import { HOME, RESULTADOS } from '../../config/router/paths';
 import { useHistory } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ export const Navbar = () => {
     <header className="nav-header">
       <nav className="nav-search">
         <a className="nav-logo" href={HOME}>
-          <img id="logo1" src="logo-meli.png" alt="Logo de Mercado Libre" height="35px" width="145px"></img>
+          <img id="logo1" src="logo-meli.png" alt="Logo de Mercado Libre" height="35px" width="140px"></img>
           <img id="logo2" src="meli-logo.png" alt="Logo de Mercadi Libre" height="40px" width="40px"></img>
         </a>
           <form className="form-search" onSubmit={handleSubmit}>

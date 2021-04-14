@@ -1,4 +1,5 @@
-import { Navbar } from './components/views/Navbar';
+import { Navbar } from './components/common/Navbar';
+import { Home } from './components/views/Home';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { HOME, RESULTADOS, DETALLE } from './config/router/paths';
 
@@ -8,8 +9,11 @@ function App() {
       <Router>
         <Navbar></Navbar>
        <Switch>
-         <Route path={HOME} exact></Route>
-         <Route path={RESULTADOS}></Route>
+         <Route path={HOME} exact>
+           <Home></Home>
+         </Route>
+         <Route path={RESULTADOS}>
+         </Route>
          <Route path={DETALLE}></Route>
        </Switch>
       </Router>
