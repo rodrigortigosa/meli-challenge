@@ -8,6 +8,7 @@ export const Navbar = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     history.push(`${RESULTADOS}${event.target["query"].value}`);
+    event.target["query"].value = "";
   }
 
   return (
