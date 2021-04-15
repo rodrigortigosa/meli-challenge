@@ -1,11 +1,12 @@
 import React from "react";
+import notFound from '../../images/404.jpg';
 
 export const NoMatch = () => {
   return (
     <div>
       <div style={{display: "flex", justifyContent: "center", alignItems: "center", margin: "50px auto 10px"}}>
         <div>
-          <img src="404.jpg" alt="404" width="300px"></img>
+          <img src={notFound} alt="404" width="300px"></img>
         </div>
       </div>
       <div style={{display: "flex", justifyContent: "center", alignItems: "center", margin: "20px auto"}}>
