@@ -1,5 +1,7 @@
-.main-container {
-  width: 1200px;
+.main-container {    
+  margin: 10px 5%;
+  display: flex;
+  justify-content: center;
 }
 
 .div-loading {
@@ -31,8 +33,7 @@
 
 .list-products {
   background-color: white;
-  margin: 10px auto;
+  width: 1200px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }

@@ -9,7 +9,7 @@
 .nav-search {
   background-color: #fff159;
   width: 1200px;
-  margin: 10px 20px;
+  margin: 10px 5%;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -40,11 +40,6 @@
 #input-search::placeholder {
   color: #d1d1d1;
   font-size: 17px;
-}
-
-.main-container {
-  width: 1200px;
-  margin: auto;
 }
 
 @media (max-width: 1023px) {
