@@ -18,12 +18,12 @@ export const Navbar = () => {
       <nav className="nav-search">
         <a className="nav-logo" href={HOME}>
           <img id="logo1" src={logo1} alt="Logo de Mercado Libre" height="35px" width="140px"></img>
-          <img id="logo2" src={logo2} alt="Logo de Mercadi Libre" height="40px" width="40px"></img>
+          <img id="logo2" src={logo2} alt="Logo de Mercado Libre" height="40px" width="40px"></img>
         </a>
           <form className="form-search" onSubmit={handleSubmit}>
             <div className="div-form-search">
               <div className="input-group">
-                <input name="query" id="input-search" type="text" className="form-control" placeholder="Buscar productos, marcas y mas..." maxLength="120" autoFocus></input>
+                <input name="query" id="input-search" type="text" className="form-control" placeholder="Buscar productos, marcas y mas..." maxLength="120" autoFocus required></input>
                 <div className="input-group-append">
                   <button className="btn" type="submit" style={{backgroundColor:'white', border: '1px solid #ced4da'}}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-search" viewBox="0 0 16 16">
