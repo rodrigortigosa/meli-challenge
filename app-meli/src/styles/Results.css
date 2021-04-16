@@ -1,0 +1,38 @@
+.main-container {
+  width: 1200px;
+}
+
+.div-loading {
+  display: flex;
+  justify-content: center;
+  margin: 150px auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-loading img {
+  animation: loading infinite 3s linear;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.div-loading-text {
+  margin-top: 30px;
+}
+
+.list-products {
+  background-color: white;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
