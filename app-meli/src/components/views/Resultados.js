@@ -76,7 +76,7 @@ export const Resultados = () => {
                           product.shipping.free_shipping ? 
                           <span>
                             $ {product.price}
-                            <img src={free_shipping} alt="Envio gratis" style={{marginLeft: "10px"}}></img>
+                            <img className="img-free-shipping" src={free_shipping} alt="Envio gratis"></img>
                           </span>
                           :
                           <span>$ {product.price}</span>
@@ -84,6 +84,9 @@ export const Resultados = () => {
                       </div>
                       <h2>{product.title}</h2>
                       <p>Completo Unico!</p>
+                    </div>
+                    <div className="product-location">
+                        <p>{product.address.state_name}</p>
                     </div>
                   </div>
                 )

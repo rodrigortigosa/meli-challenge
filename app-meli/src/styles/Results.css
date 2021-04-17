@@ -110,3 +110,19 @@
 .product-price {
   padding-bottom: 25px;
 }
+
+.img-free-shipping {
+  margin-left: 10px;
+}
+
+.product-location {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-location p {
+ color: #666666;
+ font-size: 12px;
+}
