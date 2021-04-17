@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import productsService from '../../services/products';
 import { useLocation } from "react-router-dom";
 import wheel from '../../images/loading-wheel.png'
+import free_shipping from '../../images/shipping.png'
 import '../../styles/Results.css';
 
 function useQuery() {
@@ -44,13 +45,34 @@ export const Resultados = () => {
         </div> 
         :
         <div className="list-products">
-            { 
-              products.map(product => (
-                <div>
-                  <p key={product.id}>{product.title}</p>
+          {
+            products.map(product => {
+              return (
+                <div key={product.id} className="product">
+                  <div className="product-img">
+                    <img src={product.thumbnail} alt="Imagen del producto" width="180px"></img>
+                  </div>
+                  <div className="product-info">
+                    <div className="product-price">
+                      {console.log(product.shipping.free_shipping)}
+                      {
+                        
+                        product.shipping.free_shipping ? 
+                        <span>
+                          $ {product.price}
+                          <img src={free_shipping} alt="Envio gratis" style={{marginLeft: "10px"}}></img>
+                        </span>
+                        :
+                        <span>$ {product.price}</span>
+                      }
+                    </div>
+                    <h2>{product.title}</h2>
+                    <p>Completo Unico!</p>
+                  </div>
                 </div>
-              ))
-            }
+              )
+            })
+          }
         </div>
       }
     </div>

@@ -1,5 +1,5 @@
 .main-container {    
-  margin: 10px 5%;
+  margin: 50px 5% 80px;
   display: flex;
   justify-content: center;
 }
@@ -36,4 +36,41 @@
   width: 1200px;
   display: flex;
   flex-direction: column;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+
+.product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.product span {
+  font-size: 24px;
+}
+
+.product h2 {
+  font-size: 18px;
+}
+
+.product-img {
+  margin: 20px;
+}
+
+.product-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-price {
+  padding-bottom: 25px;
 }
