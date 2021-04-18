@@ -10,6 +10,10 @@ function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
+const separarMiles = (num) => {
+  return num.toLocaleString('de-DE');
+}
+
 export const Resultados = () => {
   let query = useQuery();
   const [ products, setProducts ] = useState([]);
@@ -65,6 +69,9 @@ export const Resultados = () => {
           <div className="list-products">
             {
               products.map(product => {
+
+                console.log(separarMiles(product.price));
+
                 return (
                   <div key={product.id} className="product">
                     <div className="product-img">
@@ -72,14 +79,15 @@ export const Resultados = () => {
                     </div>
                     <div className="product-info">
                       <div className="product-price">
+                        
                         {
                           product.shipping.free_shipping ? 
                           <span>
-                            $ {product.price}
+                            $ {separarMiles(product.price)}
                             <img className="img-free-shipping" src={free_shipping} alt="Envio gratis"></img>
                           </span>
                           :
-                          <span>$ {product.price}</span>
+                          <span>$ {separarMiles(product.price)}</span>
                         }
                       </div>
                       <h2>{product.title}</h2>
@@ -94,7 +102,7 @@ export const Resultados = () => {
             }
           </div>
         </div>
-      }
+      } 
     </div>
   )
 }
