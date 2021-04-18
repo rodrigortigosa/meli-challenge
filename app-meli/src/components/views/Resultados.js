@@ -40,7 +40,6 @@ export const Resultados = () => {
         console.log(error);
       });
     }, 2000);
-    
   }, []);
   
   return (
@@ -69,9 +68,6 @@ export const Resultados = () => {
           <div className="list-products">
             {
               products.map(product => {
-
-                console.log(separarMiles(product.price));
-
                 return (
                   <div key={product.id} className="product">
                     <div className="product-img">
@@ -79,7 +75,6 @@ export const Resultados = () => {
                     </div>
                     <div className="product-info">
                       <div className="product-price">
-                        
                         {
                           product.shipping.free_shipping ? 
                           <span>
