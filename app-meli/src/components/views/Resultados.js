@@ -6,6 +6,7 @@ import productsService from '../../services/products';
 import wheel from '../../images/loading-wheel.png';
 import free_shipping from '../../images/shipping.png';
 import '../../styles/Results.css';
+import { NoMatch } from "./NoMatch";
 
 const useQuery = () => {
   return new URLSearchParams(useLocation().search);
@@ -13,6 +14,48 @@ const useQuery = () => {
 
 const separarMiles = (num) => {
   return num.toLocaleString('de-DE');
+}
+
+const mostrarResultados = (products, categories) => {
+  if (products.length === 0) return <NoMatch />
+  else {
+    return (
+      <div className="results">
+        <Categorias categorias={categories} />
+        <div className="list-products">
+          {
+            products.map(product => {
+              return (
+                <div key={product.id} className="product">
+                  <div className="product-img">
+                    <img src={product.thumbnail} alt="Imagen del producto" width="180px"></img>
+                  </div>
+                  <div className="product-info">
+                    <div className="product-price">
+                      {
+                        product.shipping.free_shipping ? 
+                        <span>
+                          $ {separarMiles(product.price)}
+                          <img className="img-free-shipping" src={free_shipping} alt="Envio gratis"></img>
+                        </span>
+                        :
+                        <span>$ {separarMiles(product.price)}</span>
+                      }
+                    </div>
+                    <h2>{product.title}</h2>
+                    <p>Completo Unico!</p>
+                  </div>
+                  <div className="product-location">
+                    <p>{product.address.state_name}</p>
+                  </div>
+                </div>
+              )
+            })
+          }
+        </div>
+      </div>
+    )
+  }
 }
 
 export const Resultados = () => {
@@ -57,40 +100,7 @@ export const Resultados = () => {
             </div>
         </div> 
         :
-        <div className="results">
-          <Categorias categorias={categories} />
-          <div className="list-products">
-            {
-              products.map(product => {
-                return (
-                  <div key={product.id} className="product">
-                    <div className="product-img">
-                      <img src={product.thumbnail} alt="Imagen del producto" width="180px"></img>
-                    </div>
-                    <div className="product-info">
-                      <div className="product-price">
-                        {
-                          product.shipping.free_shipping ? 
-                          <span>
-                            $ {separarMiles(product.price)}
-                            <img className="img-free-shipping" src={free_shipping} alt="Envio gratis"></img>
-                          </span>
-                          :
-                          <span>$ {separarMiles(product.price)}</span>
-                        }
-                      </div>
-                      <h2>{product.title}</h2>
-                      <p>Completo Unico!</p>
-                    </div>
-                    <div className="product-location">
-                        <p>{product.address.state_name}</p>
-                    </div>
-                  </div>
-                )
-              })
-            }
-          </div>
-        </div>
+        mostrarResultados(products, categories)
       } 
     </div>
   )

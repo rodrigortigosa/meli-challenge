@@ -1,0 +1,33 @@
+.container-mensaje {
+  width: 1200px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.mensaje {
+  background-color: white;
+  width: 90%;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+
+.mensaje h3 {
+  font-size: 24px;
+}
+
+.mensaje ul {
+  padding-left: 18px;
+  margin-top: 16px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.mensaje li {
+  color: rgba(0, 0, 0, .8);
+}
