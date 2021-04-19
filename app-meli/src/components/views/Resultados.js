@@ -2,11 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import productsService from '../../services/products';
 import { useLocation } from "react-router-dom";
-import wheel from '../../images/loading-wheel.png'
-import free_shipping from '../../images/shipping.png'
+import wheel from '../../images/loading-wheel.png';
+import free_shipping from '../../images/shipping.png';
 import '../../styles/Results.css';
 
-function useQuery() {
+const useQuery = () => {
   return new URLSearchParams(useLocation().search);
 }
 
@@ -15,7 +15,8 @@ const separarMiles = (num) => {
 }
 
 export const Resultados = () => {
-  let query = useQuery();
+  let query = useQuery().get("search");
+
   const [ products, setProducts ] = useState([]);
   const [ categories, setCategories ] = useState([]);
   const [ loading, setLoading ] = useState(false);
@@ -24,15 +25,15 @@ export const Resultados = () => {
     setLoading(true);
 
     setTimeout(() => {
-      productsService.getLimitedProducts(query.get("search"), 4)
+      productsService.getLimitedProducts(query, 4)
       .then((initialProducts) => {
-          setProducts(prevProducts => prevProducts.concat(initialProducts));
+          setProducts(initialProducts);
           setLoading(false);
         })
         .catch((error) => {
         console.log(error);
       });
-      productsService.getCategories(query.get("search"))
+      productsService.getCategories(query)
       .then((initialCategories) => {
         setCategories(initialCategories);
         })
@@ -40,7 +41,7 @@ export const Resultados = () => {
         console.log(error);
       });
     }, 2000);
-  }, []);
+  }, [query]);
   
   return (
     <div className="main-container">
