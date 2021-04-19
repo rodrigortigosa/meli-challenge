@@ -1,0 +1,29 @@
+.categories {
+  margin: 0 0 20px;
+}
+
+.list-categories {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  color: #666666;
+  font-size: 14px;
+}
+
+.list-categories li {
+  display: flex;
+}
+
+.list-categories li:last-child {
+  font-weight: bold;
+}
+
+.list-categories li+li:before {
+  display: inline-block;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  color: #868e96;
+  content: "> ";
+}
