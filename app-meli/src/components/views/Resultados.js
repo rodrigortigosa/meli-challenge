@@ -1,7 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import productsService from '../../services/products';
 import { useLocation } from "react-router-dom";
+import { Categorias } from '../views/Categorias';
+import productsService from '../../services/products';
 import wheel from '../../images/loading-wheel.png';
 import free_shipping from '../../images/shipping.png';
 import '../../styles/Results.css';
@@ -57,15 +58,7 @@ export const Resultados = () => {
         </div> 
         :
         <div className="results">
-          <div className="categories">
-            <ul className="list-categories">
-              {
-                categories.map(category => (
-                  <li key={category.id}>{category.name}</li>
-                ))
-              }
-            </ul>
-          </div>
+          <Categorias categorias={categories} />
           <div className="list-products">
             {
               products.map(product => {
