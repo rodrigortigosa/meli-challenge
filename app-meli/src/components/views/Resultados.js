@@ -4,8 +4,8 @@ import { useLocation } from "react-router-dom";
 import { NoMatch } from "./NoMatch";
 import { Categorias } from '../views/Categorias';
 import { Productos } from "./Productos";
+import { Loading } from "./Loading";
 import productsService from '../../services/products';
-import wheel from '../../images/loading-wheel.png';
 import '../../styles/Resultados.css';
 
 const useQuery = () => {
@@ -57,14 +57,7 @@ export const Resultados = () => {
     <div className="main-container">
       {
         loading ? 
-        <div className="div-loading">
-            <div className="img-loading">
-              <img src={wheel} alt="Loading wheel" width="100px"></img>
-            </div>
-            <div className="div-loading-text">
-              <p>Cargando...</p>
-            </div>
-        </div> 
+        <Loading />
         :
         mostrarResultados(products, categories)
       } 
