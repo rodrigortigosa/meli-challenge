@@ -1,7 +1,7 @@
 import React from "react";
 import notFound from '../../images/404.jpg';
 
-export const NoMatch = () => {
+export const NotFoundPage = () => {
   return (
     <div>
       <div style={{display: "flex", justifyContent: "center", alignItems: "center", margin: "50px auto 10px"}}>
