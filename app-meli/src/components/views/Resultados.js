@@ -33,24 +33,21 @@ export const Resultados = () => {
 
   useEffect(() => {
     setLoading(true);
-
-    setTimeout(() => {
-      productsService.getLimitedProducts(query, 4)
-      .then((initialProducts) => {
-          setProducts(initialProducts);
-          setLoading(false);
-        })
-        .catch((error) => {
-        console.log(error);
-      });
-      productsService.getCategories(query)
-      .then((initialCategories) => {
-        setCategories(initialCategories);
-        })
-        .catch((error) => {
-        console.log(error);
-      });
-    }, 2000);
+    productsService.getLimitedProducts(query, 4)
+    .then((initialProducts) => {
+        setProducts(initialProducts);
+        setLoading(false);
+      })
+      .catch((error) => {
+      console.log(error);
+    });
+    productsService.getCategories(query)
+    .then((initialCategories) => {
+      setCategories(initialCategories);
+      })
+      .catch((error) => {
+      console.log(error);
+    });
   }, [query]);
   
   return (
