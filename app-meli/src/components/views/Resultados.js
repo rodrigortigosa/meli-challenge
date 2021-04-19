@@ -6,7 +6,7 @@ import { Categorias } from '../views/Categorias';
 import { Productos } from "./Productos";
 import productsService from '../../services/products';
 import wheel from '../../images/loading-wheel.png';
-import '../../styles/Results.css';
+import '../../styles/Resultados.css';
 
 const useQuery = () => {
   return new URLSearchParams(useLocation().search);
