@@ -5,25 +5,17 @@ import { NoMatch } from './components/views/NoMatch';
 import { HOME, RESULTADOS } from './config/router/paths';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
       <Router>
         <Navbar />
         <Switch>
-          <Route path={RESULTADOS} component={Resultados}>
-            <Resultados />
-          </Route>
-          <Route path={HOME} exact>
-            <Home />
-          </Route>
-          <Route>
-            <NoMatch />
-          </Route>
+          <Route path={RESULTADOS} component={Resultados} />
+          <Route path={HOME} component={Home} exact />
+          <Route component={NoMatch} />
         </Switch>
       </Router>
   </div>
   );
 }
-
-export default App;
