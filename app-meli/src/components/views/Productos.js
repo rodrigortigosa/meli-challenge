@@ -28,11 +28,11 @@ export const Productos = ({productos}) => {
                     <span>$ {separarMiles(product.price)}</span>
                   }
                 </div>
+                <div className="product-location">
+                  <p>{product.address.state_name}</p>
+                </div>
                 <h2>{product.title}</h2>
                 <p>Completo Unico!</p>
-              </div>
-              <div className="product-location">
-                <p>{product.address.state_name}</p>
               </div>
             </div>
           )
