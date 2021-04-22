@@ -6,6 +6,11 @@
   border-top-right-radius: .25rem;
 }
 
+.list-products a {
+  text-decoration: none;
+  color: #333;
+}
+
 .product {
   display: flex;
   justify-content: center;
