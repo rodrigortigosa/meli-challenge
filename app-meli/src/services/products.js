@@ -20,5 +20,11 @@ const getCategories = (query) => {
     return categories;
   });
 }
+
+const getProduct = (id) => {
+  const request = axios.get(`${baseUrl}/items/${id}`);
+  return request.then(response => response.data);
+};
+
 // eslint-disable-next-line import/no-anonymous-default-export
-export default {getLimitedProducts, getCategories};
+export default {getLimitedProducts, getCategories, getProduct};
