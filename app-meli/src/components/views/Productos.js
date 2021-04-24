@@ -1,7 +1,9 @@
 import React from "react";
 import free_shipping from '../../images/shipping.png';
-import "../../styles/Productos.css";
+import { generatePath, Link } from "react-router-dom";
 import { DETALLE } from '../../config/router/paths';
+import "../../styles/Productos.css";
+
 const separarMiles = (num) => {
   return num.toLocaleString('de-DE');
 }
@@ -12,7 +14,7 @@ export const Productos = ({productos}) => {
       {
         productos.map(product => {
           return (
-            <a key={product.id} href={`${DETALLE}/${product.id}`}>
+            <Link key={product.id} to={generatePath(DETALLE, { id: product.id })}>
               <div className="product">
                 <div className="product-img">
                   <img src={product.thumbnail} alt="Imagen del producto" width="180px"></img>
@@ -36,7 +38,7 @@ export const Productos = ({productos}) => {
                   <p>Completo Unico!</p>
                 </div>
               </div>
-            </a>
+            </Link>
           )
         })
       }
