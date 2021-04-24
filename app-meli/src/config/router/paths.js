@@ -1,3 +1,3 @@
 export const HOME = "/";
 export const RESULTADOS = "/resultados";
-export const DETALLE = "/items";
+export const DETALLE = "/items/:id";
