@@ -1,0 +1,53 @@
+.details {
+  background-color: white;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+
+.detail {
+  display: flex;
+  margin: 20px;
+}
+
+.detail-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.detail-img img {
+  width: 100%;
+}
+
+.detail-info {
+  width: 35%;
+}
+
+.detail-info h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.detail-info p {
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.detail-info a {
+  width: 100%;
+  height: 40px;
+}
+
+.detail-status {
+  margin-bottom: 10px;
+}
+.detail-descrip {
+  margin: 20px;
+  width: 72%;
+}
+
+.detail-descrip h3 {
+  margin-bottom: 20px;
+}
