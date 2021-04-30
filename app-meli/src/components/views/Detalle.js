@@ -64,7 +64,7 @@ export const Detalle = () => {
             </div>
             <div className="detail-descrip">
               <h3>Descripción del producto</h3>
-              <p>{descriptionProduct}</p>
+              <p className="detail-descrip-text">{descriptionProduct}</p>
             </div>
           </div>
         </div>
