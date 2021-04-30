@@ -38,5 +38,10 @@ const getProduct = (id) => {
   });
 };
 
+const getDescription  = (id) => {
+  const request = axios.get(`${baseUrl}/items/${id}/descriptions`);
+  return request.then(response => response.data[0].plain_text);
+}
+
 // eslint-disable-next-line import/no-anonymous-default-export
-export default {getLimitedProducts, getCategories, getProduct};
+export default {getLimitedProducts, getCategories, getProduct, getDescription};
