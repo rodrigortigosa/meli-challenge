@@ -12,6 +12,10 @@
 }
 
 @media (max-width: 550px) {
+  .main-container {
+    min-width: 100%;
+  }
+
   .results {
     margin: 20px 0 80px;
   }

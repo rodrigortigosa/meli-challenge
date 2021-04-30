@@ -64,10 +64,6 @@
 }
 
 @media (max-width: 550px) {
-  .main-container {
-    min-width: 100%;
-  }
-  
   .product {
     flex-direction: column;
   }
