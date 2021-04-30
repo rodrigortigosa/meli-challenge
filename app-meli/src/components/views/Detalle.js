@@ -40,9 +40,11 @@ export const Detalle = () => {
               </div>
               <div className="detail-info">
                 <div className="detail-status">
-                  <span>{`${product.condition} - ${product.sold_quantity} vendidos`}</span>
+                  <span>
+                    {product.condition === "new" ? 'Nuevo ' : 'Usado '}
+                    {`- ${product.sold_quantity} vendidos`}</span>
                 </div>
-                <h1> {product.title} </h1>
+                <h1>{product.title}</h1>
                 <p>$ {product.price}</p>
                 <div>
                   <a className="btn btn-primary" role="button" href={product.permalink} target="_blank" rel="noreferrer">
