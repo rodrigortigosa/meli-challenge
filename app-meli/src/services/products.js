@@ -19,11 +19,23 @@ const getCategories = (query) => {
     }
     return categories;
   });
-}
+};
 
 const getProduct = (id) => {
   const request = axios.get(`${baseUrl}/items/${id}`);
-  return request.then(response => response.data);
+  return request.then(response => {
+    let product = {};
+    product = {
+      id: response.data.id,
+      title: response.data.title,
+      price: response.data.price,
+      sold_quantity: response.data.sold_quantity,
+      condition: response.data.condition,
+      permalink: response.data.permalink,
+      picture: response.data.pictures[0].secure_url,
+    }
+    return product;
+  });
 };
 
 // eslint-disable-next-line import/no-anonymous-default-export

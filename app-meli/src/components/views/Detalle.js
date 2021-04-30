@@ -36,7 +36,7 @@ export const Detalle = () => {
           <div className="details">
             <div className="detail">
               <div className="detail-img">
-                <img src={product.thumbnail} alt="Imagen del producto"></img>
+                <img src={product.picture} alt="Imagen del producto"></img>
               </div>
               <div className="detail-info">
                 <div className="detail-status">
