@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/meli-challenge/static/css/main.353cd5e2.chunk.css",
-    "main.js": "/meli-challenge/static/js/main.b8bfaeb9.chunk.js",
-    "main.js.map": "/meli-challenge/static/js/main.b8bfaeb9.chunk.js.map",
-    "runtime-main.js": "/meli-challenge/static/js/runtime-main.53af714b.js",
-    "runtime-main.js.map": "/meli-challenge/static/js/runtime-main.53af714b.js.map",
-    "static/js/2.43481c89.chunk.js": "/meli-challenge/static/js/2.43481c89.chunk.js",
-    "static/js/2.43481c89.chunk.js.map": "/meli-challenge/static/js/2.43481c89.chunk.js.map",
-    "index.html": "/meli-challenge/index.html",
-    "static/css/main.353cd5e2.chunk.css.map": "/meli-challenge/static/css/main.353cd5e2.chunk.css.map",
-    "static/js/2.43481c89.chunk.js.LICENSE.txt": "/meli-challenge/static/js/2.43481c89.chunk.js.LICENSE.txt",
-    "static/media/404.ad835cf3.jpg": "/meli-challenge/static/media/404.ad835cf3.jpg",
-    "static/media/imagen-meli.0ce9f161.png": "/meli-challenge/static/media/imagen-meli.0ce9f161.png",
-    "static/media/loading-wheel.511dfdd8.png": "/meli-challenge/static/media/loading-wheel.511dfdd8.png",
-    "static/media/meli-logo.148f3ddc.png": "/meli-challenge/static/media/meli-logo.148f3ddc.png"
+    "main.css": "/app-meli/static/css/main.353cd5e2.chunk.css",
+    "main.js": "/app-meli/static/js/main.b8bfaeb9.chunk.js",
+    "main.js.map": "/app-meli/static/js/main.b8bfaeb9.chunk.js.map",
+    "runtime-main.js": "/app-meli/static/js/runtime-main.f472adbb.js",
+    "runtime-main.js.map": "/app-meli/static/js/runtime-main.f472adbb.js.map",
+    "static/js/2.43481c89.chunk.js": "/app-meli/static/js/2.43481c89.chunk.js",
+    "static/js/2.43481c89.chunk.js.map": "/app-meli/static/js/2.43481c89.chunk.js.map",
+    "index.html": "/app-meli/index.html",
+    "static/css/main.353cd5e2.chunk.css.map": "/app-meli/static/css/main.353cd5e2.chunk.css.map",
+    "static/js/2.43481c89.chunk.js.LICENSE.txt": "/app-meli/static/js/2.43481c89.chunk.js.LICENSE.txt",
+    "static/media/404.ad835cf3.jpg": "/app-meli/static/media/404.ad835cf3.jpg",
+    "static/media/imagen-meli.0ce9f161.png": "/app-meli/static/media/imagen-meli.0ce9f161.png",
+    "static/media/loading-wheel.511dfdd8.png": "/app-meli/static/media/loading-wheel.511dfdd8.png",
+    "static/media/meli-logo.148f3ddc.png": "/app-meli/static/media/meli-logo.148f3ddc.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.53af714b.js",
+    "static/js/runtime-main.f472adbb.js",
     "static/js/2.43481c89.chunk.js",
     "static/css/main.353cd5e2.chunk.css",
     "static/js/main.b8bfaeb9.chunk.js"
