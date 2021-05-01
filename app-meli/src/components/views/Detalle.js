@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import productsService from '../../services/products';
 import { Loading } from "./Loading";
-import '../../styles/Resultados.css';
 import '../../styles/Detalle.css';
 //import { Categorias } from "./Categorias";
 
@@ -35,13 +34,15 @@ export const Detalle = () => {
   }, [id]);
 
   return (
-    <div className="main-container">
+    <div className="container-main">
       {
         loading ? 
         <Loading />
         :
-        <div className="results">
+        <div className="resultados">
+          
           {/* <Categorias /> */} 
+         
           <div className="details">
             <div className="detail">
               <div className="detail-img">
@@ -62,8 +63,10 @@ export const Detalle = () => {
                 </div>
               </div>
             </div>
-            <div className="detail-descrip">
+            <div className="detail-descrip-title">
               <h3>Descripción del producto</h3>
+            </div>
+            <div className="detail-descrip">
               <p className="detail-descrip-text">{descriptionProduct}</p>
             </div>
           </div>
