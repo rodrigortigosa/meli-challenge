@@ -33,12 +33,13 @@
 }
 
 .detail-img img {
-  width: 100%;
+  max-width: 50%;
 }
 
 .detail-info {
   display: flex;
   flex-direction: column;
+  width: 30%;
 }
 
 .detail-info h1 {
@@ -81,11 +82,16 @@
 
   .detail-info {
     margin-top: 20px;
+    width: 100%;
   }
   
   .detail-img {
     margin: 20px auto;
     width: unset;
+  }
+
+  .detail-img img {
+    max-width: 70%;
   }
 }
 
